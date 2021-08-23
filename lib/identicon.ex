@@ -67,7 +67,7 @@ defmodule Identicon do
     fill = :egd.color(color)
 
     Enum.each(pixel_map, fn {start, stop} ->
-      :egd.filledRectangle(image, start, stop, color)
+      :egd.filledRectangle(image, start, stop, fill)
     end)
 
     :egd.render(image)
